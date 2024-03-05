@@ -2,7 +2,25 @@
 name = "rc_color"
 version = "0.1.0"
 edition = "2021"
+description = "🦀 Soothing pastel theme for Rust."
+repository = "https://github.com/berlinen/rc_color.git"
+keywords = ["catppuccin", "palette", "color", "theme"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ansi_term = { version = "0.12.1", optional = true }
+css-colors = { version = "1.0.1", optional = true }
+ratatui = { version = "0.26.1", optional = true }
+
+[dev-dependencies]
+indoc = "2.0.4"
+crossterm = { version = "0.27" }
+
+[features]
+ansi = ["ansi_term"]
+css = ["css-colors"]
+
+[[example]]
+name = "ratatui"
+required-features = ["ratatui"]
