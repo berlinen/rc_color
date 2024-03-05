@@ -40,3 +40,16 @@ impl Color {
         ansi_term::Color::RGB(self.0, self.1, self.2).paint(input)
     }
 }
+
+#[cfg(feature = "ratatui")]
+impl From<Color> for ratatui::style::Color {
+    fn from(value: Color) -> Self {
+        Self::Rgb(value.0, value.1, value.2)
+    }
+}
+
+impl From<Color> for (u8, u8, u8) {
+    fn from(colour: Color) -> Self {
+        (colour.0, colour.1, colour.2)
+    }
+}
