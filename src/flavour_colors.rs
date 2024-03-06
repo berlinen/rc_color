@@ -1,0 +1,31 @@
+use crate::Color;
+
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub struct FlavourColors {
+    pub rosewater: Color,
+    pub flamingo: Color,
+    pub pink: Color,
+    pub mauve: Color,
+    pub red: Color,
+    pub maroon: Color,
+    pub peach: Color,
+    pub yellow: Color,
+    pub green: Color,
+    pub teal: Color,
+    pub sky: Color,
+    pub sapphire: Color,
+    pub blue: Color,
+    pub lavender: Color,
+    pub text: Color,
+    pub subtext1: Color,
+    pub subtext0: Color,
+    pub overlay2: Color,
+    pub overlay1: Color,
+    pub overlay0: Color,
+    pub surface2: Color,
+    pub surface1: Color,
+    pub surface0: Color,
+    pub base: Color,
+    pub mantle: Color,
+    pub crust: Color,
+}
