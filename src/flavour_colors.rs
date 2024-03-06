@@ -29,3 +29,44 @@ pub struct FlavourColors {
     pub mantle: Color,
     pub crust: Color,
 }
+impl IntoIterator for FlavourColors {
+    type Item = Color;
+    type IntoIter = std::array::IntoIter<Self::Item, 26>;
+
+    /// Returns an iterator over the colours in the flavour.
+    fn into_iter(self) -> Self::IntoIter {
+        [
+            self.rosewater,
+            self.flamingo,
+            self.pink,
+            self.mauve,
+            self.red,
+            self.maroon,
+            self.peach,
+            self.yellow,
+            self.green,
+            self.teal,
+            self.sky,
+            self.sapphire,
+            self.blue,
+            self.lavender,
+            self.text,
+            self.subtext1,
+            self.subtext0,
+            self.overlay2,
+            self.overlay1,
+            self.overlay0,
+            self.surface2,
+            self.surface1,
+            self.surface0,
+            self.base,
+            self.mantle,
+            self.crust,
+        ]
+        .into_iter()
+    }
+}
+
+impl FlavourColors {
+  
+}
