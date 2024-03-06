@@ -2,7 +2,7 @@
 use std::{borrow::Cow, fmt::Debug};
 
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
-pub struct Colour(u8, u8, u8);
+pub struct Colour(pub u8, pub u8, pub u8);
 
 impl Colour {
     /// Returns a hexadecimal string representing the colour.
