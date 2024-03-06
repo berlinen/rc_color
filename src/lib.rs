@@ -1,8 +1,8 @@
 #[cfg(feature = "css")]
 pub use css_colors;
 
-mod color;
-pub use color::Color;
+mod colour;
+pub use colour::Colour;
 
-mod flavour_colors;
-pub use flavour_colors::FlavourColors;
+mod flavour_colours;
+pub use flavour_colours::FlavourColours;

@@ -2,9 +2,9 @@
 use std::{borrow::Cow, fmt::Debug};
 
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
-pub struct Color(u8, u8, u8);
+pub struct Colour(u8, u8, u8);
 
-impl Color {
+impl Colour {
     /// Returns a hexadecimal string representing the colour.
     ///
     /// # Example
@@ -48,8 +48,8 @@ impl From<Color> for ratatui::style::Color {
     }
 }
 
-impl From<Color> for (u8, u8, u8) {
-    fn from(colour: Color) -> Self {
+impl From<Colour> for (u8, u8, u8) {
+    fn from(colour: Colour) -> Self {
         (colour.0, colour.1, colour.2)
     }
 }
